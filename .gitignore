@@ -4,3 +4,4 @@
 *.exec
 *Contents/
 *.DS_Store
+*.dSYM/Contents
