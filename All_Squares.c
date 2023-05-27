@@ -19,16 +19,13 @@ void solution(int k, int cx, int cy)
 int main()
 {
     FILE *input;
+    int k, cx = 1024, cy = 1024;
     input = fopen("square.txt", "r");
-    int num, k;
     if (input != NULL)
-    {
-        int k, cx = 1024, cy = 1024;
+    {    
         while (true)
         {
-            fscanf(input, "%d", &k);
-            fscanf(input, "%d", &x);
-            fscanf(input, "%d", &y);
+            fscanf(input, "%d %d %d", &k, &x, &y);
             if (k == 0 && x == 0 && y == 0)
                 break;
             else
