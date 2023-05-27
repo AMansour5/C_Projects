@@ -18,15 +18,28 @@ void solution(int k, int cx, int cy)
 
 int main()
 {
-    int k, cx = 1024, cy = 1024;
-    while (true)
+    FILE *input;
+    input = fopen("square.txt", "r");
+    int num, k;
+    if (input != NULL)
     {
-        scanf("%d %d %d", &k, &x, &y);
-        if (k == 0 && x == 0 && y == 0)
-            break;
-        else
-            solution(k, cx, cy);
+        int k, cx = 1024, cy = 1024;
+        while (true)
+        {
+            fscanf(input, "%d", &k);
+            fscanf(input, "%d", &x);
+            fscanf(input, "%d", &y);
+            if (k == 0 && x == 0 && y == 0)
+                break;
+            else
+                solution(k, cx, cy);
             printf("%3d\n", counter);
+        }
     }
+    else
+    {
+        printf("Not able to open the file.\n");
+    }
+    fclose(input);
     return 0;
 }
