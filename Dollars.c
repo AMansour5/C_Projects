@@ -27,13 +27,9 @@ int main()
 {
     double amount;
     int cents, ways;
-    while (scanf("%lf", &amount))
+      while (scanf("%lf", &amount))
     {
-        if (amount == 0) {
-        break;
-        }
-
-        cents = (int)(amount * 100 ); // convert amount to cents
+        cents = (int)(amount * 100); // convert amount to cents
         if (cents > MAX_AMOUNT)
         {
             printf("Amount too large: %.2f\n", amount);

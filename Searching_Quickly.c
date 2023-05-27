@@ -101,4 +101,5 @@ int main()
     }
 
     KWIC_indix(titles, words_ignore, num_ignore, num_titles);
+    return 0;
 }
