@@ -3,8 +3,15 @@
 
 #define MAXN 25
 
-struct TABLE { int LEN; int WHERE; int POS; int LIST[MAXN]; } BLOCK[MAXN];
+// Define a data structure called "TABLE" to store information about blocks
+struct TABLE {
+    int LEN; // Length of the table
+    int WHERE; // Location of the table
+    int POS; // Position of block within the table
+    int LIST[MAXN]; // List of blocks in the table
+} BLOCK[MAXN]; // Declare an array of "MAXN" TABLEs called BLOCK
 
+// Function to move a block and any blocks on top of it to its original position
 void move_block(int B){
     int I, A, P, L;
     A = BLOCK[B].WHERE;
@@ -19,6 +26,7 @@ void move_block(int B){
     BLOCK[A].LEN = P;
 }
 
+// Function to move a block and any blocks on top of it to a new pile
 void move(int B1, int B2){
         int I, A, B, P, L, T;
         A = BLOCK[B1].WHERE;
@@ -37,39 +45,39 @@ void move(int B1, int B2){
 int main(){
     int N, I, A, B;
     char AC[5], WH[5];
-    scanf("%d", &N);
+    scanf("%d", &N); // Read the number of blocks as input from the user
     for(I = 0; I < N; I++){
         BLOCK[I].LEN = 1;
         BLOCK[I].WHERE = I;
         BLOCK[I].POS = 0;
         BLOCK[I].LIST[0] = I;
-    }
+    } // Initialize the TABLE data structure for each pile
    
     while(scanf("%s", AC)){
         if(strcmp(AC, "quit") == 0)
-            break;
-        scanf("%d%s%d", &A, WH, &B);
+            break; // If the user enters "quit" as input, break out of the loop
+        scanf("%d%s%d", &A, WH, &B); // Read two block numbers and a command from the user
 
         if(A < 0 || A >= N || B < 0 || B >= N)
-            continue;
-        if(BLOCK[A].WHERE == BLOCK[B].WHERE)
-            continue;
+            continue; // If the block numbers are invalid, skip to the next iteration of the loop
+        if(BLOCK[A].WHERE ==BLOCK[B].WHERE)
+            continue; // If the blocks are already in the same pile, skip to the next iteration of the loop
                    
         if(strcmp(AC, "move") == 0)
-            move_block(A);
+            move_block(A); // If the command is "move", move block A and any blocks on top of it to its original position
        
         if(strcmp(WH, "onto") == 0)
-            move_block(B);
+            move_block(B); // If the command is "move onto", move block B and any blocks on top of it to its original position
            
-        move(A, B);               
+        move(A, B); // Move block A and any blocks on top of it to block B's pile               
 
     }
    
     for(I = 0; I < N; I++){
-        printf("%d:", I);
+        printf("%d:", I); // Print the pile number followed by a colon
         for(A = 0; A < BLOCK[I].LEN; A++)
-            printf(" %d", BLOCK[I].LIST[A]);
-        printf("\n");
+            printf(" %d", BLOCK[I].LIST[A]); // Print the list of blocks in the pile
+        printf("\n"); // Move to the next line
     }
    
     return 0;
