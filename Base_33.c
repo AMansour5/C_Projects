@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
-
+#include <ctype.h>
 // Convert a number from base 'base' to base 10.
 int to_base_10(char* num, int base) {
     int result = 0;
