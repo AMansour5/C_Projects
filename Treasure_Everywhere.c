@@ -30,9 +30,9 @@ int main(void)
                 {
                     count++;  // Increment count for each map
                     strcpy(movements[j], read);
-                    Directions(movements, count, j + 1);  // Pass count and j+1 as arguments
-                    free(*movements);  // Free memory allocated for the movements array
-                    j = 0;  // Reset the index for the movements array
+                    Directions(movements, count, j + 1);
+                    free(*movements);
+                    j = 0;  
                 }
                 else
                 {
@@ -102,7 +102,6 @@ char *RemoveDigits(char *input)
 {
     char *dest = input;
     char *src = input;
-
     // Iterate through the input string, skipping any digits
     while (*src)
     {
@@ -121,5 +120,5 @@ void calc(float x, float y, int counter)
 {
     float distance;
     distance = (sqrt(pow(x, 2) + pow(y, 2)));  // Calculate the Euclidean distance
-    printf("Map #%d\nThe treasure is located at (%.3f,%.3f)\nThe distance to the treasure is %f\n\n", counter, x, y, distance);  // Print the results
+    printf("Map #%d\nThe treasure is located at (%.3f,%.3f)\nThe distance to the treasure is %f\n\n", counter, x, y, distance);
 }
