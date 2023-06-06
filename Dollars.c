@@ -27,8 +27,12 @@ int main()
 {
     double amount;
     int cents, ways;
-      while (scanf("%lf", &amount))
-    {
+      while (amount)
+    {   printf("Enter the amount of money\n");
+        scanf("%lf", &amount);
+        if (amount == 0) { 
+        break;  // Break out of the loop in case of 0
+        }
         cents = (int)(amount * 100); // convert amount to cents
         if (cents > MAX_AMOUNT)
         {
