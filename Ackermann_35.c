@@ -30,6 +30,7 @@ void longest_sequence(long long  L, long long H, long long *max_value, long long
 int main() {
     long long L, H; //L = the lower boundary value in the sequence, H = the upper boundary value in the sequence 
     while (1) { 
+        printf("Enter the lower boundary and the higher boundary in the sequence \n");
         scanf("%lld %lld", &L, &H); 
         if (L == 0 && H == 0) { // If input pair is (0, 0)
             break; // Exit loop
