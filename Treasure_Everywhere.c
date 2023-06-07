@@ -92,7 +92,7 @@ void Directions(char *movements[200], int counter, int j)
         else
         {
             x -= cos(PI / 4) * num;  // Calculate the x coordinate using cosine
-            y += cos(PI / 4) * num;  // Calculate the y coordinate using cosine
+            y -= cos(PI / 4) * num;  // Calculate the y coordinate using cosine
         }
     }
     calc(x, y, counter);  // Call the calc function to calculate the distance and print the result
