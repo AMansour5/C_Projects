@@ -1,21 +1,23 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <math.h> s
 
 #define eps 1e-8 // Define a small value for precision
 
 int main() {
-    int testcase; // Declare a variable to hold the number of testcases
-    double R, P; // Declare variables to hold the radius and length of rope
-    const double pi = 3.14159265358979323846; 
-    scanf("%d", &testcase); 
+    int testcase; // Declare a variable to hold the number of test cases
+    double R, P; // Declare variables to hold the radius and percentage of grass
+    const double pi = 3.14159265358979323846;
+    printf("Enter the number of test cases\n");
+    scanf("%d", &testcase);
 
-    while (testcase--) { 
-        scanf("%lf %lf", &R, &P); 
+    while (testcase--) {
+            printf("Enter the Radius and percentage of grass \n");
+        scanf("%lf %lf", &R, &P);
         double l = 0, r = pi, mid, ret = 0; // Initialize variables to hold left, right, middle points and rope length
         double A = R * R * pi; // Calculate the area of the circle
 
         // Perform binary search to find the angle at which the rope touches the circle
-        while (fabs(l - r) > eps) { 
+        while (fabs(l - r) > eps) {
             mid = (l + r)/2; // Calculate the middle point
             ret = hypot(R * cos(mid) - R, R * sin(mid)); // Calculate the length of rope from the center to the point of contact
             double theta = (pi - mid)/2; // Calculate the angle between the center, point of contact and x-axis
@@ -25,9 +27,9 @@ int main() {
             else
                 r = mid; // Otherwise move the right point to the middle
         }
-        printf("R = %.0lf, P = %.2lf, Rope = %.2lf\n", R, P, ret); 
+        printf("R = %.0lf, P = %.2lf, Rope = %.2lf\n", R, P, ret);
         if(testcase)
-            puts(""); 
+            puts("");
     }
-    return 0; 
+    return 0;
 }
