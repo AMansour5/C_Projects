@@ -2,18 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-
 #define MAX_N 64
 #define MAX_M 1024
 #define MAX_PATH_LEN 1024
 #define MAX_GRID_SIZE 4096
 #define BASE 2048
-
 typedef struct
 {
     int x, y;
 } Point;
-
 int n, m, golygons;
 int dx[] = {0, 0, 1, -1};
 int dy[] = {1, -1, 0, 0};
@@ -23,7 +20,6 @@ char g[MAX_GRID_SIZE][MAX_GRID_SIZE] = {};
 char g2[MAX_GRID_SIZE][MAX_GRID_SIZE];
 char ban[MAX_GRID_SIZE][MAX_GRID_SIZE] = {};
 char ways[MAX_M][MAX_PATH_LEN];
-
 void dfs(int x, int y, int dir, int step)
 {
     if (abs(x - 0) + abs(y - 0) > (step + n) * (n - step + 1) / 2)
@@ -103,7 +99,6 @@ void dfs(int x, int y, int dir, int step)
         }
     }
 }
-
 int main()
 {
     int testcase, x[MAX_N], y[MAX_N];

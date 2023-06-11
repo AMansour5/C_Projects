@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ahmedmansour/Desktop/C_Projects",
-      "program": "/Users/ahmedmansour/Desktop/C_Projects/build/Debug/outDebug"
+      "cwd": "/Users/ahmedmansour/Desktop/Programming/C_Projects",
+      "program": "/Users/ahmedmansour/Desktop/Programming/C_Projects/build/Debug/outDebug"
     }
   ]
 }

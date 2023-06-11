@@ -2,15 +2,12 @@
 #include <string.h>
 #include <stdbool.h>
 #include <limits.h>
-
 double map[21][21];
 int ans[40], alen;
-
 typedef struct Arc
 {
     int to, step;
 } Arc;
-
 int spfa(int st, int n)
 {
     double dis[21][21];
@@ -74,7 +71,6 @@ int spfa(int st, int n)
     }
     return -1;
 }
-
 int main()
 {
     int n, i, j;

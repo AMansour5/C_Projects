@@ -1,7 +1,5 @@
 # C_Projects
-## Naming_Convention
-The way we name variables and functions
 
-`camelCase`: if the name is more than 2 words the second word starts capatilized. we will use this for `variables`
+In this project we're required to solve some ICPCs problem in C and some more additional problems.
 
-`snake_case`: if the name is more than 2 words we seperate between them by using `_`. we will use this for `Functions`
+Here you can find all explainations and flowcharts for each problem [TeamDrive](https://drive.google.com/drive/folders/1lOVSLdEyMj6H8EzkfJS9pcAqRslaIRvf?usp=sharing)
