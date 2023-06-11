@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char maps[10][10];
+char maps[10][10]; 
 int dx[8] = {1,1,0,-1,-1,-1,0,1};
 int dy[8] = {0,1,1,1,0,-1,-1,-1};
 char currentPlayer;
