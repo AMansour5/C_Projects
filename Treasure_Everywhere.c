@@ -49,7 +49,7 @@ int main(void)
         printf("Not able to open the file.\n");
     }
     fclose(input);
-
+    
     return 0;
 }
 
