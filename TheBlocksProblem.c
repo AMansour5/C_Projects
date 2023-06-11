@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+ 
 #define MAXN 25
 
 // Define a data structure called "TABLE" to store information about blocks
