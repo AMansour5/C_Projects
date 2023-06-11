@@ -4,7 +4,7 @@
 int main() {
 while (1) {
 int A[105], n = 0, time[105] = {};
-while (scanf("%d", &A[n]) == 1) {
+while (scanf("%d", &A[n]) == 1) { 
 if (A[n] == 0)
 break;
 n++;
